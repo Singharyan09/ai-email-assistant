@@ -2,7 +2,7 @@ server:
   port: 8080
 
 ai:
-  api-url: https://api.anthropic.com
-  api-key: ${ANTHROPIC_API_KEY:}
-  model: claude-sonnet-5-5
+  base-url: ${AI_BASE_URL:}
+  api-key: ${AI_API_KEY:}
+  model: ${AI_MODEL:}
   max-tokens: 1024

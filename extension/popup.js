@@ -23,7 +23,10 @@ async function run(endpoint) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...email, tone }),
     });
-    if (!res.ok) throw new Error(`Backend returned ${res.status}`);
+    if (!res.ok) {
+      const error = await res.json().catch(() => null);
+      throw new Error(error?.error || `Backend returned ${res.status}`);
+    }
     const data = await res.json();
     output.textContent = data.result;
   } catch (err) {
