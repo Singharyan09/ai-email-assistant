@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { width: 340px; font-family: system-ui, sans-serif; font-size: 14px; margin: 12px; }
+      button { padding: 6px 12px; margin-right: 6px; cursor: pointer; }
+      select { padding: 5px; }
+      #output { white-space: pre-wrap; margin-top: 12px; padding: 8px; background: #f4f4f4; border-radius: 6px; min-height: 40px; }
+      .row { margin-bottom: 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <label for="tone">Tone</label>
+      <select id="tone">
+        <option value="professional">Professional</option>
+        <option value="friendly">Friendly</option>
+        <option value="brief">Brief</option>
+      </select>
+    </div>
+    <div class="row">
+      <button id="summarize">Summarize</button>
+      <button id="reply">Draft reply</button>
+      <button id="copy">Copy</button>
+    </div>
+    <div id="output">Open an email in Gmail, then pick an action.</div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "AI Email Assistant",
+  "version": "0.1.0",
+  "description": "Summarize emails and draft replies in Gmail.",
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://mail.google.com/*", "http://localhost:8080/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Email Assistant"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
